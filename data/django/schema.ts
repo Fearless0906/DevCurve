@@ -44,7 +44,7 @@ export const getAllComponents = async (): Promise<ComponentResponse[]> => {
 };
 
 export const getComponentById = async (
-  id: string,
+  id: string | number,
 ): Promise<ComponentResponse | null> => {
   try {
     const response = await client.get<ComponentResponse>(
