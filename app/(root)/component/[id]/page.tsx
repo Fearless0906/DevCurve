@@ -3,6 +3,7 @@ import { getComponentById } from "@/data/django/schema";
 import { Eye, Heart } from "lucide-react";
 import Image from "next/image";
 
+// @ts-ignore
 export default async function ComponentDetails({
   params,
 }: {
