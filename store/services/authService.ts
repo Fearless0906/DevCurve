@@ -1,16 +1,18 @@
 import client from "@/lib/client";
+import { SignupData } from "../slice/authSlice";
 
 interface LoginData {
   email: string;
   password: string;
 }
 
-interface SignupData {
-  name: string;
+export type SignupPayload = {
+  first_name: string;   // add this
+  last_name: string;    // add this
   email: string;
   password: string;
   re_password: string;
-}
+};
 
 export interface User {
   id: number;

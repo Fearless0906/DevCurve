@@ -80,7 +80,7 @@ export const login = createAsyncThunk(
   },
 );
 
-interface SignupData {
+export interface SignupData {
   first_name: string;
   last_name: string;
   email: string;
