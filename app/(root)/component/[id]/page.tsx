@@ -3,7 +3,14 @@ import { getComponentById } from "@/data/django/schema";
 import { Eye, Heart } from "lucide-react";
 import Image from "next/image";
 
-const ComponentDetails = async ({ params }: { params: { id: string } }) => {
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+const ComponentDetails = async ({ params, searchParams }: PageProps) => {
   const item = await getComponentById(params.id);
   if (!item) {
     return (
