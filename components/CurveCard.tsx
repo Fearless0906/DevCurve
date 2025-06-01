@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { CurveCardProps } from "@/types";
@@ -20,12 +19,17 @@ export default function CurveCard({
       <Card
         className={cn(
           "w-full max-w-sm rounded-2xl shadow-md transition hover:shadow-lg",
-          className,
+          className
         )}
       >
         <CardHeader className="p-0">
           <div className="relative w-full h-48 overflow-hidden rounded-t-2xl">
-            <Image src={thumbnail} alt={title} fill className="object-cover" />
+            <Image
+              src={thumbnail ?? "/assets/images/placeholder.jpg"}
+              alt={title}
+              fill
+              className="object-cover"
+            />
           </div>
         </CardHeader>
         <CardContent className="p-4 space-y-3">
