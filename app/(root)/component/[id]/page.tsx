@@ -10,8 +10,7 @@ type PageProps = {
 };
 
 const ComponentDetails = async ({ params }: PageProps) => {
-  const item = await getComponentById(params?.id);
-
+  const item = await getComponentById(params.id);
   if (!item) {
     return (
       <p className="text-center text-muted-foreground">Component not found.</p>
