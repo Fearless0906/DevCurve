@@ -11,7 +11,6 @@ export default function CurveCard({
   thumbnail,
   title,
   description,
-  languages,
   views,
   react = false,
   className,
@@ -21,7 +20,7 @@ export default function CurveCard({
       <Card
         className={cn(
           "w-full max-w-sm rounded-2xl shadow-md transition hover:shadow-lg",
-          className
+          className,
         )}
       >
         <CardHeader className="p-0">
@@ -37,15 +36,7 @@ export default function CurveCard({
           <p className="text-sm text-muted-foreground line-clamp-2">
             {description}
           </p>
-          <div className="flex flex-wrap gap-2">
-            {languages && typeof languages === "string"
-              ? JSON.parse(languages).map((lang: string, i: number) => (
-                  <Badge key={i} variant="secondary">
-                    {lang}
-                  </Badge>
-                ))
-              : null}
-          </div>
+
           <div className="flex items-center gap-1 text-xs text-muted-foreground">
             <Eye className="w-4 h-4" />
             <span>{views.toLocaleString()} views</span>

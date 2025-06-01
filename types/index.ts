@@ -5,10 +5,9 @@ export type Language = {
 
 export interface CurveCardProps {
   id: string;
-  thumbnail: string;
+  thumbnail?: string;
   title: string;
   description: string;
-  languages?: string[]; // Changed to string array
   views: number;
   react?: boolean;
   className?: string;
@@ -34,11 +33,7 @@ export interface ComponentResponse {
   thumbnail?: string;
   title: string;
   description: string;
-  languages: string[]; // Changed to string array
   views: number;
   react: boolean;
   guides: Guide[];
 }
-
-
-

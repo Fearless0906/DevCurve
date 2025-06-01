@@ -22,6 +22,7 @@ const page = () => {
     fetchComponents();
   }, []);
 
+  // @ts-ignore
   return (
     <main className="wrapper pt-32 pb-8">
       <div className="container">
