@@ -4,11 +4,7 @@ import { Eye, Heart } from "lucide-react";
 import Image from "next/image";
 
 // @ts-ignore
-export default async function ComponentDetails({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function ComponentDetails({ params }: any) {
   const item = await getComponentById(params.id);
 
   if (!item) {
